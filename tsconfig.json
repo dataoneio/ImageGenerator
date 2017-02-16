@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es5",
+        "declaration": true,
+        "allowJs": false,
+        "types" : ["node","svg2png"]
+    },
+    "files":[
+      "ImageProperties.ts",
+      "ImageGenerator.ts",
+      "WatermarkProperties.ts",
+      "ObjectToCSS.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+}

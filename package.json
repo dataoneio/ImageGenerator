@@ -1,0 +1,34 @@
+{
+  "name": "imagegenerator",
+  "version": "0.0.1",
+  "description": "Generate PNG Image for a Quote provided",
+  "main": "ImageGenerator.js",
+  "author": "Viraj Trivedi <inf3cti0n95@gmail.com>",
+  "license": "MIT",
+  "types": "ImageGenerator.d.ts",
+  "dependencies": {
+    "@types/css": "0.0.30",
+    "@types/node": "^7.0.5",
+    "@types/svg2png": "0.0.27",
+    "add-px-to-style": "^1.0.0",
+    "hyphenate-style-name": "^1.0.2",
+    "mkdirp": "^0.5.1",
+    "svg2png": "^4.1.1",
+    "typescript": "^1.5.3"
+  },
+  "keywords": [
+    "imagegenerator",
+    "image",
+    "generator",
+    "png",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inf3cti0n95/ImageGenerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inf3cti0n95/ImageGenerator/issues"
+  },
+  "homepage": "https://github.com/inf3cti0n95/ImageGenerator"
+}
