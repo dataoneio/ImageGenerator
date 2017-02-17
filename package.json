@@ -25,10 +25,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/inf3cti0n95/ImageGenerator.git"
+    "url": "https://github.com/dataoneio/ImageGenerator"
   },
   "bugs": {
-    "url": "https://github.com/inf3cti0n95/ImageGenerator/issues"
+    "url": "https://github.com/dataoneio/ImageGenerator/issues"
   },
-  "homepage": "https://github.com/inf3cti0n95/ImageGenerator"
+  "homepage": "https://github.com/dataoneio/ImageGenerator"
 }
