@@ -1,6 +1,6 @@
 {
   "name": "imagegenerator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate PNG Image for a Quote provided",
   "main": "ImageGenerator.js",
   "author": "Viraj Trivedi <inf3cti0n95@gmail.com>",

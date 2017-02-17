@@ -172,6 +172,10 @@ class ImageGenerator {
 	        xml:space="preserve">
         <style type="text/css">
             p{
+
+                text-rendering: optimizeLegibility !important;
+                -webkit-font-smoothing: antialiased !important;
+                -moz-osx-font-smoothing: grayscale;
                 ${toCss(this.ImageProperties)}
             }
 
