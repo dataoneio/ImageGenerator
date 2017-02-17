@@ -71,12 +71,17 @@ class ImageGenerator {
         });
 
 
-
         if (options.backgroundImage) {
 
             this.ImageProperties.backgroundImage = `url(${this.generateImageSrc(options.backgroundImage)})`;
         } else {
             this.ImageProperties.backgroundImage = this.defaultImageProperties.backgroundImage;
+        }
+        if (options.fontFamily) {
+
+            this.ImageProperties.fontFamily = `'${this.generateImageSrc(options.fontFamily)}'`;
+        } else {
+            this.ImageProperties.fontFamily = this.defaultImageProperties.fontFamily;
         }
 
 
@@ -109,6 +114,20 @@ class ImageGenerator {
             if(imageProps[key])
             this.ImageProperties[key] = imageProps[key]
         });
+
+
+        
+        if (imageProps.backgroundImage) {
+            this.ImageProperties.backgroundImage = `url(${this.generateImageSrc(imageProps.backgroundImage)})`;
+        } else {
+            this.ImageProperties.backgroundImage = this.defaultImageProperties.backgroundImage;
+        }
+        if (imageProps.fontFamily) {
+
+            this.ImageProperties.fontFamily = `'${imageProps.fontFamily}'`;
+        } else {
+            this.ImageProperties.fontFamily = this.defaultImageProperties.fontFamily;
+        }
     }
 
     public generateImageSync(outputFileName: string) {
@@ -174,6 +193,7 @@ class ImageGenerator {
         </foreignObject>
         </svg>
         `;
+
         mkdirp.sync(dirname(outputFileName));
         writeFileSync(outputFileName, svg2png.sync(svgTemplate, { width: this.ImageProperties.width, height: this.ImageProperties.height }));
     }

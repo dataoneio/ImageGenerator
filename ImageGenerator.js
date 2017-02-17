@@ -57,6 +57,12 @@ var ImageGenerator = (function () {
         else {
             this.ImageProperties.backgroundImage = this.defaultImageProperties.backgroundImage;
         }
+        if (options.fontFamily) {
+            this.ImageProperties.fontFamily = "'" + this.generateImageSrc(options.fontFamily) + "'";
+        }
+        else {
+            this.ImageProperties.fontFamily = this.defaultImageProperties.fontFamily;
+        }
     }
     ImageGenerator.prototype.addWatermark = function (watermarkProperties) {
         if (watermarkProperties.imageurl === "") {
@@ -85,6 +91,18 @@ var ImageGenerator = (function () {
             if (imageProps[key])
                 _this.ImageProperties[key] = imageProps[key];
         });
+        if (imageProps.backgroundImage) {
+            this.ImageProperties.backgroundImage = "url(" + this.generateImageSrc(imageProps.backgroundImage) + ")";
+        }
+        else {
+            this.ImageProperties.backgroundImage = this.defaultImageProperties.backgroundImage;
+        }
+        if (imageProps.fontFamily) {
+            this.ImageProperties.fontFamily = "'" + imageProps.fontFamily + "'";
+        }
+        else {
+            this.ImageProperties.fontFamily = this.defaultImageProperties.fontFamily;
+        }
     };
     ImageGenerator.prototype.generateImageSync = function (outputFileName) {
         var tempWaterProps = {};
