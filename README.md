@@ -27,6 +27,7 @@ image.generateImageSync('quote.png')
 ```
 
 * Example Output
+
 ![alt tag](https://raw.githubusercontent.com/dataoneio/ImageGenerator/master/example/quote.png)
 
 ### Constructor ###
