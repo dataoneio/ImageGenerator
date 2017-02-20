@@ -15,4 +15,3 @@ function toCss(obj) {
     return result;
 }
 exports.toCss = toCss;
-//# sourceMappingURL=ObjectToCSS.js.map

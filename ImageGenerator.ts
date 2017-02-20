@@ -49,7 +49,8 @@ class ImageGenerator {
         verticalAlign: 'middle',
         boxSizing: 'border-box',
         fontStyle: 'none',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        fontWeight: 400
     }
 
     constructor(quote?: string, options?: ImageProperties) {
@@ -198,6 +199,7 @@ class ImageGenerator {
         </svg>
         `;
 
+        console.log(svgTemplate)
         mkdirp.sync(dirname(outputFileName));
         writeFileSync(outputFileName, svg2png.sync(svgTemplate, { width: this.ImageProperties.width, height: this.ImageProperties.height }));
     }

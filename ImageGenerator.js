@@ -35,7 +35,8 @@ var ImageGenerator = (function () {
             verticalAlign: 'middle',
             boxSizing: 'border-box',
             fontStyle: 'none',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            fontWeight: 400
         };
         if (quote) {
             this.quote = quote;
@@ -140,6 +141,7 @@ var ImageGenerator = (function () {
             this.quote = "";
         }
         var svgTemplate = "\n        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t        xml:space=\"preserve\">\n        <style type=\"text/css\">\n            p{\n\n                text-rendering: optimizeLegibility !important;\n                -webkit-font-smoothing: antialiased !important;\n                -moz-osx-font-smoothing: grayscale;\n                " + ObjectToCSS_1.toCss(this.ImageProperties) + "\n            }\n\n            #waterMark{\n               height: 100px;\n                opacity: 0.7;\n                background-size: contain;\n                z-index: 5;\n                position: absolute;\n                border: none;\n                display:" + waterMarkDisplay + ";\n                " + ObjectToCSS_1.toCss(tempWaterProps) + "\n\n            }\n        </style>\n        <foreignObject height=\"" + this.ImageProperties.height + "\" width=\"" + this.ImageProperties.width + "\">\n            <p xmlns=\"http://www.w3.org/1999/xhtml\">" + this.quote + "</p>\n            <img xmlns=\"http://www.w3.org/1999/xhtml\" src=\"" + this.generateImageSrc(this.waterMarkProperties.imageurl) + "\" id=\"waterMark\"/>\n        </foreignObject>\n        </svg>\n        ";
+        console.log(svgTemplate);
         mkdirp.sync(path_1.dirname(outputFileName));
         fs_1.writeFileSync(outputFileName, svg2png.sync(svgTemplate, { width: this.ImageProperties.width, height: this.ImageProperties.height }));
     };
@@ -167,6 +169,5 @@ ImageGenerator.watermarkPosition = {
     TOPRIGHT: "topright",
     TOPLEFT: "topleft"
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = ImageGenerator;
-//# sourceMappingURL=ImageGenerator.js.map
+exports.__esModule = true;
+exports["default"] = ImageGenerator;

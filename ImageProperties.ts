@@ -19,6 +19,7 @@ interface ImageProperties {
     backgroundSize?: string;
     fontStyle?: string;
     textDecoration?: string;
+    fontWeight?:number;
 }
 
 
